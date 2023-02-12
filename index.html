@@ -4,29 +4,70 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <title>My test page</title>
+        <style>
+            div {
+        overflow: hidden;
+        white-space: nowrap;
+        }
+ 
+        .overlay {
+            z-index: 9;
+            margin: 30px;
+        }
+        li {
+            display: inline-flex;  
+        }
+
+        #parent {
+            width: 884px;
+            height: 250px;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+        #childWrapper {
+            list-style: none;
+            width: 400px;
+            height: 350px;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        #childWrapper > li {
+            float: left;
+            width: 100px;
+            height: 50px;
+        }
+        #childWrapper > li:nth-child(even) {
+            background-color: #d4ffdd;
+        }
+        </style>
     </head>
 
     <body>
-        <div style="background-color:rgb(92, 127, 223);color:white;padding:20px;">
+        <div style="padding:20px;text-align: right">
             <button type="button">Review</button>
             <button type="button">Tips</button>
             <button type="button">Alerts</button>
             <button type="button">Blog</button>
           </div>
 
-        <div>
-            <img src="backg.jpg" alt="sea" height="500" width="1000">
-            <h1>Discover Your Life, Travel Where You Want</h1>
-            <p>Would you explore natur paradiso in the world, let's find the best
-                destination in world with us.</p>
+        <div style="background-image: url('sea.jpeg'); ">
+            <h1 style="text-align:center">
+                <br><br>Discover Your Life, Travel Where You Want
+            </h1>
+            <p style="text-align:center">
+                Would you explore natur paradiso in the world, let's find the best
+                destination in world with us.
+                <br><br><br><br><br><br>
+            </p>
         </div>
         
-        <div style="background-color:rgb(92, 127, 223);color:white;padding:20px;">
+        <div style="background-color:rgb(92, 127, 223);color:rgb(0, 0, 0);padding:20px;border-top-right-radius:  25px;border-top-left-radius:25px;width: 150px;">
             <button type="button">Flight</button>
             <button type="button">Hotel</button>
         </div>
 
-        <div style="background-color:rgb(92, 127, 223);color:white;padding:20px;">
+        <div style="background-color:rgb(92, 127, 223);color:white;padding:20px; border-bottom-right-radius: 25px;border-bottom-left-radius: 25px;border-top-right-radius: 25px;;">
             <label for="from">from</label>
             <input type="text" id="from" from="from" size="10">
 
@@ -44,17 +85,148 @@
 
 
 
-        <h2>Special Upcoming Offers</h2>
-        <div style="background-color:rgb(92, 127, 223);color:white;padding:20px;">
+        <h2 style="text-align:center">Special Upcoming Offers</h2>
+        <div style="text-align:center;color:white;padding:20px;">
             <button type="button">Team</button>
             <button type="button">Couple</button>
             <button type="button">Family</button>
         </div>
 
-        <div >
+        <div id="parent">
+            <ul id="childwrapper">
+            <li style="background-color:rgb(92, 127, 223);color:white;padding:10px;border-radius: 20px;">
+                <img src="sea.jpeg" alt="sea" height="150" width="150" style="border-radius: 20px;">
+                <div>  <p> 14 feb  2022</p>
+                    <p> 3 days, 3 nights</p>
+                    <p>Loga sea</p> 
+                    <p> 700$/person</p>
+                    <button type="button">Book now</button></div>
+                </li>
 
+                <li style="background-color:rgb(92, 127, 223);color:white;border-radius: 20px;padding:10px;">
+                    <img src="sea.jpeg" alt="sea" height="150" width="150" style="border-radius: 20px;">
+                    <div>  <p> 14 feb  2022</p>
+                        <p> 3 days, 3 nights</p>
+                        <p>Loga sea</p> 
+                        <p> 700$/person</p>
+                        <button type="button">Book now</button></div>
+                    </li>
+
+                    <li style="background-color:rgb(92, 127, 223);color:white;padding:10px;border-radius: 20px;">
+                        <img src="sea.jpeg" alt="sea" height="150" width="150" style="border-radius: 20px;">
+                        <div>  <p> 14 feb  2022</p>
+                            <p> 3 days, 3 nights</p>
+                            <p>Loga sea</p> 
+                            <p> 700$/person</p>
+                            <button type="button">Book now</button></div>
+                        </li>
+            </ul>
         </div>
 
+        <br><br>
 
+        <li style="background-color:white;color:black;border-radius: 20px;padding:10px;">
+            <img src="lighthouse.jpeg" alt="sea" height="450" width="300" style="border-radius: 20px;">
+            <div>  <h2>Travel Any Corner Of <br> The World With Us</h2>
+                <p>text <br>.<br>.<br>.<br>.<br>.<br>text</p>
+                <button type="button">Contact Us</button></div>
+                <!-- <div class="overlay" style="background-color:rgb(92, 127, 223);border-radius: 5px;width: 80px;text-align:center;">  
+                    300+<br>destinations</div> -->
+    
+            </li>
+        
+
+        
+
+        <h2 style="text-align:center">Recommended Destination</h2>
+        <div style="text-align:center;color:white;padding:20px;">
+            <button type="button">Popular</button>
+            <button type="button">Advanture</button>
+            <button type="button">Beath</button>
+        </div>
+
+        <div id="parent" style="height: 300px;text-align:center; background-color: white;">
+            <ul id="childwrapper">
+            <li>
+                <div style="background-color:rgb(92, 127, 223);color:white;padding:10px;border-radius: 20px;width: 150px;">
+                    <img src="sea.jpeg" alt="sea" height="150" width="150" style="border-radius: 20px;">
+                    <h3>Kina Mountain</h3>
+                 <p>Cambodia</p>
+                </div>
+            </li>
+            <li>
+                <div style="background-color:rgb(92, 127, 223);color:white;padding:10px;border-radius: 20px;width: 150px;">
+                    <img src="sea.jpeg" alt="sea" height="150" width="150" style="border-radius: 20px;">
+                    <h3>Kina Mountain</h3>
+                 <p>Cambodia</p>
+                </div>
+            </li>
+            <li>
+                <div style="background-color:rgb(92, 127, 223);color:white;padding:10px;border-radius: 20px;width: 150px;">
+                    <img src="sea.jpeg" alt="sea" height="150" width="150" style="border-radius: 20px;">
+                    <h3>Kina Mountain</h3>
+                 <p>Cambodia</p>
+                </div>
+            </li>
+            <li>
+                <div style="background-color:rgb(92, 127, 223);color:white;padding:10px;border-radius: 20px;width: 150px;">
+                    <img src="sea.jpeg" alt="sea" height="150" width="150" style="border-radius: 20px;">
+                    <h3>Kina Mountain</h3>
+                 <p>Cambodia</p>
+                </div>
+            </li>
+                </ul>
+            </div>
+
+
+    <br><br>
+
+    <div id="parent" style="height: 300px;text-align:center; background-color: white;">
+        <ul id="childwrapper">
+        <li>
+            <div style="background-color:rgb(92, 127, 223);color:white;padding:10px;border-radius: 20px;width: 300px;">
+                <p> Our trip to Morocco was truly a onece in a lifetime<br>
+                    experience and we are so grateful to everyone <br>
+                    that made it happen seamlessly. Our travel<br>
+                planner, Jaouad, was increadible.</p>
+                    <h3>-Vand D</h3>
+             <img src="sea.jpeg" alt="sea" height="50" width="50" style="border-radius: 50px;">
+                
+            </div>
+        </li>
+        <li>
+            <div style="background-color:rgb(92, 127, 223);color:white;padding:10px;border-radius: 20px;width: 300px;">
+                <p> Our trip to Morocco was truly a onece in a lifetime<br>
+                experience and we are so grateful to everyone <br>
+                that made it happen seamlessly. Our travel<br>
+            planner, Jaouad, was increadible.</p>
+                <h3>-Vand D</h3>
+        
+             <img src="sea.jpeg" alt="sea" height="50" width="50" style="border-radius: 50px;">
+            </div>
+        </li>
+            </ul>
+
+    <div style="text-align:center"><button type="button">previous</button>
+        <button type="button">next</button> </div>
+        </div>
+
+    <div style="background-image: url('sea.jpeg'); text-align: center; border-radius: 25px;">
+        <h1>
+            <br><br>Don't Miss The 50% Discount If<br>
+            You Register Today
+        </h1>
+        <button type="button" >Register Today</button>
+        <br><br><br><br>
+    </div>
+
+
+    <div style="padding:20px;text-align: right">
+        <button type="button">Review</button>
+        <button type="button">Tips</button>
+        <button type="button">Alerts</button>
+        <button type="button">Blog</button>
+      </div>
     </body>
 </html>
+
